@@ -1,0 +1,7 @@
+C:\Users\milton.vivar\Documents\BOT-MVIVAR_DELL\Documentos Generales\Cursos DEV\Practica\Eventos\Eventos\bin\Debug\Eventos.exe.config
+C:\Users\milton.vivar\Documents\BOT-MVIVAR_DELL\Documentos Generales\Cursos DEV\Practica\Eventos\Eventos\bin\Debug\Eventos.exe
+C:\Users\milton.vivar\Documents\BOT-MVIVAR_DELL\Documentos Generales\Cursos DEV\Practica\Eventos\Eventos\bin\Debug\Eventos.pdb
+C:\Users\milton.vivar\Documents\BOT-MVIVAR_DELL\Documentos Generales\Cursos DEV\Practica\Eventos\Eventos\obj\Debug\Eventos.csprojAssemblyReference.cache
+C:\Users\milton.vivar\Documents\BOT-MVIVAR_DELL\Documentos Generales\Cursos DEV\Practica\Eventos\Eventos\obj\Debug\Eventos.csproj.CoreCompileInputs.cache
+C:\Users\milton.vivar\Documents\BOT-MVIVAR_DELL\Documentos Generales\Cursos DEV\Practica\Eventos\Eventos\obj\Debug\Eventos.exe
+C:\Users\milton.vivar\Documents\BOT-MVIVAR_DELL\Documentos Generales\Cursos DEV\Practica\Eventos\Eventos\obj\Debug\Eventos.pdb
