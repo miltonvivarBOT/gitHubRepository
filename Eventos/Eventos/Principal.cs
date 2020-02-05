@@ -36,7 +36,6 @@ namespace Eventos
                 Console.WriteLine(Mensaje);
             }
             Console.ReadKey();
-
         }
     }
 }
