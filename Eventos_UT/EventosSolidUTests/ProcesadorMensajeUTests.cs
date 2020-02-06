@@ -15,15 +15,15 @@ namespace EventosSolid.Tests
     public class ProcesadorMensajeUTests
     {
         [TestMethod()]
-        public void ProcesadorMensajeEventos_ProcesarCadena_CadenaMensaje()
+        public void ProcesadorMensajeEventos_VerificarEventoPasado_MensajeEventoPasado()
         {
             //ARRANGE
             Evento evento = new Evento();
-            evento.FechaEvento = new DateTime(2020, 02, 05, 13, 00, 00);
+            evento.FechaEvento = new DateTime(2020, 02, 05, 12, 00, 00);
             evento.NombreEvento = "Constitución Política";
             DTOEvento dtoEvento = new DTOEvento();
-            dtoEvento.Diferencia = 1;
-            dtoEvento.Periodo = "Día";
+            dtoEvento.Diferencia = 6;
+            dtoEvento.Periodo = "horas";
             bool estatusEvento = true;
             var SUT = new ProcesadorMensajes();
 
@@ -31,7 +31,27 @@ namespace EventosSolid.Tests
             string cadenaMensaje = SUT.ProcesadorMensajeEventos(evento, dtoEvento, estatusEvento);
 
             //ASSERT
-            Assert.Equals(cadenaMensaje, "");
+            Assert.AreEqual(expected: cadenaMensaje, actual: "Constitución Política ocurrió hace 6 horas");
+        }
+
+        [TestMethod()]
+        public void ProcesadorMensajeEventos_VerificarEventoFuturo_MensajeEventoFuturo()
+        {
+            //ARRANGE
+            Evento evento = new Evento();
+            evento.FechaEvento = new DateTime(2020, 02, 05, 20, 00, 00);
+            evento.NombreEvento = "Constitución Política";
+            DTOEvento dtoEvento = new DTOEvento();
+            dtoEvento.Diferencia = 1;
+            dtoEvento.Periodo = "horas";
+            bool estatusEvento = false;
+            var SUT = new ProcesadorMensajes();
+
+            //ACT
+            string cadenaMensaje = SUT.ProcesadorMensajeEventos(evento, dtoEvento, estatusEvento);
+
+            //ASSERT
+            Assert.AreEqual(expected: cadenaMensaje, actual: "Constitución Política ocurrirá en 1 horas");
         }
     }
 }

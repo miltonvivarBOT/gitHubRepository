@@ -69,6 +69,7 @@
     <Otherwise />
   </Choose>
   <ItemGroup>
+    <Compile Include="ProcesadorArchivoTxtUTests.cs" />
     <Compile Include="ProcesadorEventosUTests.cs" />
     <Compile Include="ProcesadorMensajeUTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

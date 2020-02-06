@@ -5,6 +5,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using EventosSolid.Interfaces;
+using Moq;
 
 namespace EventosSolid.Tests
 {
@@ -12,15 +14,16 @@ namespace EventosSolid.Tests
     public class ProcesadorEventosUTests
     {
         [TestMethod()]
-        public void ProcesadorEventosTest()
+        public void ProcesadorEventos_ValidarConstructor_ConstructorCorrecto()
         {
-            Assert.Fail();
-        }
+            var DOCIRecuperarEventos = new Mock<IRecuperarEventos>();
+            var DOCICalculadorRangoEvento = new Mock<ICalculadorRangoEvento>();
+            var DOCIRecuperarEstatusEvento = new Mock<IRecuperarEstatusEvento>();
+            var DOCIProcesadorMensajes = new Mock<IProcesadorMensajes>();
+            var DOCIImprimirMensajes = new  Mock<IImprimirMensajes>();
+            var SUT = new ProcesadorEventos(DOCIRecuperarEventos.Object, DOCICalculadorRangoEvento.Object, DOCIRecuperarEstatusEvento.Object, DOCIProcesadorMensajes.Object, DOCIImprimirMensajes.Object);
 
-        [TestMethod()]
-        public void InciarProcesoEventosTest()
-        {
-            Assert.Fail();
+            Assert.IsNotNull(SUT);
         }
     }
 }
